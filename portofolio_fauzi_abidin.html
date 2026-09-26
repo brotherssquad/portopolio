@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Desain Grafis • Fauzi Abidin</title>
+  
+  <!-- Favicon: Monogram FA Logo -->
+  <link rel="icon" type="image/png" href="logo_fa.png">
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Portofolio resmi Fauzi Abidin - Pelajar & Desainer Grafis Kreatif spesialis Canva & CapCut dari Sleman, D.I. Yogyakarta.">
+  <meta name="author" content="Fauzi Abidin">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Canvas Confetti for Celebration Effects -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#fbf7ee',
+              100: '#f5ecd6',
+              200: '#ebd7ad',
+              300: '#dfbc7d',
+              400: '#d5a153',
+              500: '#ca8a36',
+              600: '#b06f2a',
+              700: '#8e5224',
+              800: '#744223',
+              900: '#603720',
+              accent: '#f59e0b',
+            },
+            creative: {
+              indigo: '#6366f1',
+              violet: '#8b5cf6',
+              emerald: '#10b981',
+              cyan: '#06b6d4',
+              rose: '#f43f5e'
+            },
+            dark: {
+              bg: '#090d16',
+              card: '#111827',
+              border: '#1f293d',
+              cardHover: '#162238'
+            }
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'float-delayed': 'float 6s ease-in-out 3s infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'spin-slow': 'spin 18s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090d16;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2a374f;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ca8a36;
+    }
+
+    /* Glassmorphism Classes */
+    .glass-card {
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .light .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .glass-nav {
+      background: rgba(9, 13, 22, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .light .glass-nav {
+      background: rgba(255, 255, 255, 0.88);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    /* Gradient Background Blobs */
+    .glow-blob {
+      position: absolute;
+      filter: blur(90px);
+      z-index: 0;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+    .light .glow-blob {
+      opacity: 0.18;
+    }
+  </style>
+</head>
+<body class="bg-dark-bg text-slate-200 font-sans transition-colors duration-300 antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Background Decorative Ambient Lights -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div class="glow-blob w-96 h-96 rounded-full bg-brand-500 top-10 left-10 animate-float"></div>
+    <div class="glow-blob w-[500px] h-[500px] rounded-full bg-creative-indigo top-1/3 right-10 animate-float-delayed"></div>
+    <div class="glow-blob w-80 h-80 rounded-full bg-creative-emerald bottom-20 left-1/4 animate-pulse-slow"></div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo (Monogram Huruf F & A Modern) -->
+      <a href="#" class="flex items-center gap-3.5 group" title="Fauzi Abidin — Graphic Designer">
+        <div class="relative w-12 h-12 rounded-2xl overflow-hidden border border-amber-500/40 bg-slate-950 shadow-lg shadow-amber-500/25 group-hover:scale-105 group-hover:border-amber-400 group-hover:shadow-amber-500/45 transition-all shrink-0 p-1">
+          <img src="logo_fa.png" alt="FA Monogram Logo - Fauzi Abidin" class="w-full h-full object-contain rounded-xl">
+        </div>
+        <div>
+          <span class="font-display font-black text-lg text-white group-hover:text-amber-400 transition-colors tracking-tight flex items-center gap-1.5">
+            Fauzi Abidin
+          </span>
+          <span class="block text-[11px] font-mono text-amber-400/90 tracking-wider font-semibold">GRAPHIC DESIGNER</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/60 p-1.5 rounded-full border border-slate-800 text-sm font-medium">
+        <a href="#tentang" class="px-4 py-2 rounded-full text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">Tentang</a>
+        <a href="#keahlian" class="px-4 py-2 rounded-full text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">Keahlian</a>
+        <a href="#portofolio" class="px-4 py-2 rounded-full text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">Portofolio</a>
+        <a href="#produk-digital" class="px-4 py-2 rounded-full text-amber-400 hover:text-amber-300 hover:bg-slate-800/80 transition-all flex items-center gap-1.5 font-bold">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i> Produk Digital
+        </a>
+        <a href="#riwayat" class="px-4 py-2 rounded-full text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">Riwayat</a>
+        <a href="#kontak" class="px-4 py-2 rounded-full text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">Kontak</a>
+      </nav>
+
+      <!-- Right Action Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" class="p-2.5 rounded-xl border border-slate-800 bg-slate-900/70 hover:bg-slate-800 text-slate-400 hover:text-amber-400 transition-all" title="Ganti Mode Terang / Gelap">
+          <i data-lucide="sun" id="sunIcon" class="w-5 h-5 hidden"></i>
+          <i data-lucide="moon" id="moonIcon" class="w-5 h-5"></i>
+        </button>
+
+        <!-- WhatsApp Quick CTA -->
+        <a href="https://wa.me/6289508049216?text=Halo%20Fauzi%20Abidin,%20saya%20melihat%20portofolio%20desain%20grafis%20kamu%20dan%20tertarik%20untuk%20berdiskusi." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white text-sm font-semibold shadow-lg shadow-emerald-600/20 hover:scale-105 active:scale-95 transition-all">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Hubungi Saya</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="md:hidden p-2.5 rounded-xl border border-slate-800 bg-slate-900/70 text-slate-300 hover:text-white">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pt-3 pb-6 border-t border-slate-800 bg-dark-bg/95 backdrop-blur-xl">
+      <div class="flex flex-col gap-2">
+        <a href="#tentang" class="mobile-link px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800/80 font-medium">Tentang</a>
+        <a href="#keahlian" class="mobile-link px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800/80 font-medium">Keahlian</a>
+        <a href="#portofolio" class="mobile-link px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800/80 font-medium">Portofolio</a>
+        <a href="#produk-digital" class="mobile-link px-4 py-3 rounded-lg text-amber-400 hover:bg-slate-800/80 font-bold flex items-center justify-between">
+          <span class="flex items-center gap-2"><i data-lucide="shopping-bag" class="w-4 h-4"></i> Produk Digital</span>
+          <span class="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 text-xs font-mono font-bold">Rp 33.000</span>
+        </a>
+        <a href="#riwayat" class="mobile-link px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800/80 font-medium">Riwayat & Pendidikan</a>
+        <a href="#kontak" class="mobile-link px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800/80 font-medium">Kontak</a>
+        <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
+          <a href="https://wa.me/6289508049216" target="_blank" class="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-emerald-600 text-white font-medium">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp (+62 895-0804-9216)
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="relative z-10 pt-28 pb-20">
+
+    <!-- HERO SECTION -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Text Info -->
+        <div class="lg:col-span-7 flex flex-col gap-6 text-center lg:text-left">
+          
+          <!-- Status Tag -->
+          <div class="inline-flex items-center justify-center lg:justify-start">
+            <span class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-500/10 border border-brand-500/30 text-brand-400 backdrop-blur-sm">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span>Pelajar & Desainer Grafis • Terbuka untuk Kolaborasi</span>
+            </span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15]">
+            Mengubah Ide & Cerita Menjadi <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-400 to-amber-500">Karya Visual Menakjubkan</span>
+          </h1>
+
+          <!-- Bio Pitch -->
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Halo! Saya <strong class="text-white font-semibold">Fauzi Abidin</strong>, seorang pelajar santri dari Sleman, D.I. Yogyakarta yang memiliki passion mendalam di bidang <span class="text-amber-400 font-medium">Desain Grafis (Canva)</span> dan <span class="text-violet-400 font-medium">Video Editing (CapCut)</span>. Berpengalaman magang di industri media dan siap menghadirkan konten visual yang komunikatif, estetis, dan bernilai tinggi.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#portofolio" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-500 to-amber-600 hover:from-brand-400 hover:to-amber-500 text-slate-950 font-bold text-sm sm:text-base flex items-center gap-2.5 shadow-xl shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+              <span>Lihat Portofolio Karya</span>
+            </a>
+            
+            <a href="Fauzi Abidin cv.pdf" target="_blank" class="px-6 py-3.5 rounded-xl border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-sm sm:text-base flex items-center gap-2.5 hover:border-brand-500/50 hover:-translate-y-0.5 active:translate-y-0 transition-all">
+              <i data-lucide="file-down" class="w-5 h-5 text-brand-400"></i>
+              <span>Unduh CV Resmi (PDF)</span>
+            </a>
+          </div>
+
+          <!-- Quick Metric Badges -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 max-w-lg mx-auto lg:mx-0">
+            <div class="flex flex-col">
+              <span class="font-display font-extrabold text-2xl sm:text-3xl text-white">Canva</span>
+              <span class="text-xs text-slate-400">Spesialis Desain</span>
+            </div>
+            <div class="flex flex-col border-x border-slate-800 px-4">
+              <span class="font-display font-extrabold text-2xl sm:text-3xl text-white">CapCut</span>
+              <span class="text-xs text-slate-400">Video Editing</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-display font-extrabold text-2xl sm:text-3xl text-amber-400">100%</span>
+              <span class="text-xs text-slate-400">Dedikasi Belajar</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual with Fauzi's Real Photo -->
+        <div class="lg:col-span-5 flex justify-center relative">
+          
+          <!-- Outer Ambient Glow -->
+          <div class="absolute -inset-4 bg-gradient-to-tr from-brand-500/20 via-creative-indigo/20 to-amber-500/20 rounded-3xl blur-2xl opacity-75"></div>
+
+          <!-- Main Photo Card Container -->
+          <div class="relative w-full max-w-md glass-card rounded-3xl p-4 sm:p-5 border border-slate-700/80 shadow-2xl">
+            
+            <!-- Photo Frame with Aspect Ratio -->
+            <div class="relative w-full rounded-2xl overflow-hidden aspect-[4/5] bg-slate-900 border border-slate-700">
+              <img src="fauzi_photo.jpg" alt="Fauzi Abidin - Graphic Designer" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700" onerror="this.onerror=null; this.src='photo_1.jpg';">
+              
+              <!-- Subtle gradient overlay at bottom of photo -->
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+
+              <!-- In-Photo Tag -->
+              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <div class="bg-slate-900/90 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-slate-700 text-xs font-semibold text-white">
+                  📍 Sleman, D.I. Yogyakarta
+                </div>
+                <div class="bg-brand-500/90 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center gap-1.5">
+                  <i data-lucide="award" class="w-3.5 h-3.5"></i>
+                  <span>Munzalan 25/26</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Micro-Card 1: Pondok Multimedia -->
+            <div class="absolute -bottom-5 -left-4 sm:-left-6 glass-card px-4 py-3 rounded-2xl border border-brand-500/30 shadow-xl flex items-center gap-3 animate-float">
+              <div class="w-10 h-10 rounded-xl bg-brand-500/20 border border-brand-500/40 flex items-center justify-center text-brand-400">
+                <i data-lucide="palette" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white">Pondok Multimedia</p>
+                <p class="text-[11px] text-slate-400">Munzalan Indonesia</p>
+              </div>
+            </div>
+
+            <!-- Floating Micro-Card 2: Industry Internship -->
+            <div class="absolute -top-4 -right-4 sm:-right-6 glass-card px-4 py-2.5 rounded-2xl border border-creative-indigo/30 shadow-xl flex items-center gap-3 animate-float-delayed">
+              <div class="w-9 h-9 rounded-xl bg-creative-indigo/20 border border-creative-indigo/40 flex items-center justify-center text-creative-indigo">
+                <i data-lucide="briefcase" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white">Yoshugi Media Group</p>
+                <p class="text-[11px] text-slate-400">Pengalaman Magang</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: TENTANG SAYA (ABOUT ME) -->
+    <section id="tentang" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/80">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col items-center text-center mb-12">
+        <span class="text-xs font-mono font-semibold tracking-widest text-brand-400 uppercase bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20 mb-3">
+          TENTANG SAYA
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+          Perjalanan & Semangat Kreatif
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base max-w-2xl mt-3">
+          Mengenal lebih dekat sosok Fauzi Abidin, nilai integritas seorang santri, dan komitmen tinggi dalam dunia visual digital.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Story Narrative -->
+        <div class="lg:col-span-7 flex flex-col gap-5">
+          <div class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-800 flex flex-col gap-4">
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white flex items-center gap-2.5">
+              <i data-lucide="quote" class="w-6 h-6 text-brand-400"></i>
+              <span>"Desain adalah jembatan antara ide dan dampak nyata."</span>
+            </h3>
+            
+            <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+              Saya adalah seorang pelajar kelahiran Semarang (13 Mei 2008) yang saat ini berdomisili di Sleman, Daerah Istimewa Yogyakarta. Ketertarikan saya terhadap pelajaran <strong class="text-white">desain grafis</strong> berawal dari rasa ingin tahu bagaimana sebuah kombinasi warna, gambar, dan tipografi dapat menyampaikan pesan dengan begitu kuat dan menggugah audiens.
+            </p>
+
+            <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+              Melalui pengalaman belajar di <strong class="text-white">Pondok Askar Kauny</strong> hingga menimba keahlian spesifik di <strong class="text-white">Pondok Multimedia Munzalan (2025-2026)</strong>, saya mendalami seni visual komunikasi, desain layout dengan Canva, serta editing video pendek dengan CapCut. Saya juga mempraktikkan keterampilan ini secara langsung saat magang di <strong class="text-amber-400">Kantor Yoshugi Media Group</strong> dan mengajar santri di Pondok Askar Kauny.
+            </p>
+
+            <!-- Value Pillars -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3">
+              <div class="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col gap-1">
+                <div class="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center">
+                  <i data-lucide="eye" class="w-4 h-4"></i>
+                </div>
+                <h4 class="font-bold text-sm text-white">Visual Rapi</h4>
+                <p class="text-xs text-slate-400">Keseimbangan tata letak & hierarki teks yang mudah dipahami.</p>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col gap-1">
+                <div class="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                  <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+                </div>
+                <h4 class="font-bold text-sm text-white">Integritas</h4>
+                <p class="text-xs text-slate-400">Disiplin santri, tepat waktu, dan menghargai orisinalitas.</p>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col gap-1">
+                <div class="w-7 h-7 rounded-lg bg-violet-500/10 text-violet-400 flex items-center justify-center">
+                  <i data-lucide="zap" class="w-4 h-4"></i>
+                </div>
+                <h4 class="font-bold text-sm text-white">Cepat Tanggap</h4>
+                <p class="text-xs text-slate-400">Antusias belajar tren baru dan siap menerima masukan.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Personal Data Sheet Card -->
+        <div class="lg:col-span-5">
+          <div class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden">
+            
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="user-check" class="w-5 h-5 text-brand-400"></i>
+                <h3 class="font-display font-bold text-lg text-white">Data Profil Pribadi</h3>
+              </div>
+              <span class="text-xs font-mono bg-slate-800 px-2.5 py-1 rounded text-slate-400">VERIFIED CV</span>
+            </div>
+
+            <div class="divide-y divide-slate-800/80 text-sm">
+              <div class="py-3 flex justify-between items-center">
+                <span class="text-slate-400">Nama Lengkap</span>
+                <span class="font-semibold text-white">Fauzi Abidin</span>
+              </div>
+              <div class="py-3 flex justify-between items-center">
+                <span class="text-slate-400">Tempat, Tgl Lahir</span>
+                <span class="font-medium text-white">Semarang, 13 Mei 2008</span>
+              </div>
+              <div class="py-3 flex justify-between items-center">
+                <span class="text-slate-400">Jenis Kelamin</span>
+                <span class="font-medium text-white">Laki-laki</span>
+              </div>
+              <div class="py-3 flex justify-between items-center">
+                <span class="text-slate-400">Kewarganegaraan</span>
+                <span class="font-medium text-white">Indonesia 🇮🇩</span>
+              </div>
+              <div class="py-3 flex justify-between items-center">
+                <span class="text-slate-400">Agama</span>
+                <span class="font-medium text-white">Islam</span>
+              </div>
+              <div class="py-3 flex justify-between items-center">
+                <span class="text-slate-400">Status</span>
+                <span class="font-medium text-white">Pelajar / Belum Menikah</span>
+              </div>
+              <div class="py-3 flex justify-between items-center">
+                <span class="text-slate-400">Lokasi / Domisili</span>
+                <span class="font-medium text-amber-400 text-right">Padukuhan Mendiro, Sleman, DIY</span>
+              </div>
+            </div>
+
+            <!-- Download Button in Card -->
+            <a href="Fauzi Abidin cv.pdf" target="_blank" class="mt-5 w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white text-xs font-bold flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="file-text" class="w-4 h-4 text-brand-400"></i>
+              <span>Buka Dokumen CV Asli</span>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION: KEAHLIAN & SOFTWARE (SKILLS) -->
+    <section id="keahlian" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/80">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col items-center text-center mb-12">
+        <span class="text-xs font-mono font-semibold tracking-widest text-brand-400 uppercase bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20 mb-3">
+          KEAHLIAN & ALAT KERJA
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+          Keahlian Visual & Multimedia
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base max-w-2xl mt-3">
+          Daftar software dan kompetensi praktis yang dikuasai untuk memproduksi karya grafis dan video berkualitas.
+        </p>
+      </div>
+
+      <!-- Core Skills Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Skill 1: Canva Pro & Graphic Design -->
+        <div class="glass-card p-6 sm:p-7 rounded-3xl border border-slate-800 hover:border-brand-500/50 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+                <i data-lucide="layout-template" class="w-7 h-7"></i>
+              </div>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 font-bold">Keahlian Utama</span>
+            </div>
+
+            <h3 class="font-display font-bold text-xl text-white group-hover:text-cyan-400 transition-colors">Desain Canva</h3>
+            <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+              Ahli dalam merancang materi grafis menggunakan Canva: pemilihan font serasi, tata letak seimbang, palet warna tematik, manipulasi elemen, serta export resolusi tinggi.
+            </p>
+
+            <!-- Skill Tags -->
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Poster Dakwah</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Instagram Carousel</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Banner / Spanduk</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Twibbon Event</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800">
+            <div class="flex justify-between text-xs font-semibold mb-1.5">
+              <span class="text-slate-300">Tingkat Penguasaan</span>
+              <span class="text-cyan-400 font-mono">92%</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" style="width: 92%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 2: CapCut & Short-Form Video -->
+        <div class="glass-card p-6 sm:p-7 rounded-3xl border border-slate-800 hover:border-creative-violet/50 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-500/20 to-purple-500/20 border border-violet-500/30 flex items-center justify-center text-violet-400 group-hover:scale-110 transition-transform">
+                <i data-lucide="video" class="w-7 h-7"></i>
+              </div>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-violet-500/10 text-violet-300 border border-violet-500/20 font-bold">Multimedia</span>
+            </div>
+
+            <h3 class="font-display font-bold text-xl text-white group-hover:text-violet-400 transition-colors">Editing CapCut</h3>
+            <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+              Mengedit video vertikal Reels, Shorts, dan TikTok dengan ritme dinamis: transisi mulus, sinkronisasi audio ketukan (beat sync), keyframing, motion caption, dan color filter.
+            </p>
+
+            <!-- Skill Tags -->
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Short Video Reels</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Beat Matching</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Animated Subtitles</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Sound Effects</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800">
+            <div class="flex justify-between text-xs font-semibold mb-1.5">
+              <span class="text-slate-300">Tingkat Penguasaan</span>
+              <span class="text-violet-400 font-mono">88%</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-violet-500 to-purple-500 rounded-full" style="width: 88%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 3: Visual Communication & Media Creation -->
+        <div class="glass-card p-6 sm:p-7 rounded-3xl border border-slate-800 hover:border-amber-500/50 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500/20 to-brand-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
+                <i data-lucide="share-2" class="w-7 h-7"></i>
+              </div>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20 font-bold">Produksi Media</span>
+            </div>
+
+            <h3 class="font-display font-bold text-xl text-white group-hover:text-amber-400 transition-colors">Produksi Konten Media</h3>
+            <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+              Memahami alur kreasi konten digital dari konsep, pembuatan copy teks singkat, penentuan moodboard, pengambilan gambar dasar, hingga publikasi ke kanal media sosial.
+            </p>
+
+            <!-- Skill Tags -->
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Media Santri</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Agensi Kreatif</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Storytelling</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-300">Kamera Dasar</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800">
+            <div class="flex justify-between text-xs font-semibold mb-1.5">
+              <span class="text-slate-300">Tingkat Penguasaan</span>
+              <span class="text-amber-400 font-mono">85%</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-amber-500 to-brand-500 rounded-full" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Additional Soft Skills & Work Ethic Badges -->
+      <div class="mt-10 p-6 rounded-3xl bg-slate-900/60 border border-slate-800 flex flex-wrap items-center justify-around gap-6 text-center">
+        <div class="flex items-center gap-3">
+          <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400"></i>
+          <span class="text-sm font-semibold text-slate-200">Public Speaking & Mengajar</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400"></i>
+          <span class="text-sm font-semibold text-slate-200">Kolaborasi Tim Agensi (Yoshugi)</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400"></i>
+          <span class="text-sm font-semibold text-slate-200">Kepatuhan Waktu & Deadline</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400"></i>
+          <span class="text-sm font-semibold text-slate-200">Cepat Belajar Software Baru</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION: PORTOFOLIO KARYA (GALLERY & SHOWCASE) -->
+    <section id="portofolio" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/80">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col items-center text-center mb-8">
+        <span class="text-xs font-mono font-semibold tracking-widest text-brand-400 uppercase bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20 mb-3">
+          SHOWCASE KARYA CANVA
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+          Portofolio Desain Grafis Canva
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base max-w-2xl mt-3">
+          Koleksi karya desain grafis menggunakan Canva Pro: poster komersial, materi promosi F&B, event festival, fashion editorial, feed media sosial, hingga spanduk cetak.
+        </p>
+      </div>
+
+      <!-- Filter Controls & Add Project Button -->
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+        
+        <!-- Filter Tabs (Strictly Active Canva Categories) -->
+        <div class="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-slate-900/90 border border-slate-800 text-xs sm:text-sm font-medium" id="filterContainer">
+          <button data-filter="all" class="filter-btn active px-4 py-2 rounded-xl bg-brand-500 text-slate-950 font-bold transition-all">
+            Semua Desain Canva
+          </button>
+          <button data-filter="produk" class="filter-btn px-4 py-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-all">
+            Promosi & F&B
+          </button>
+          <button data-filter="event" class="filter-btn px-4 py-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-all">
+            Event & Musik
+          </button>
+          <button data-filter="fashion" class="filter-btn px-4 py-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-all">
+            Fashion & Editorial
+          </button>
+        </div>
+
+        <!-- Add Custom Project Button (Interactive for Fauzi) -->
+        <button id="openAddProjectModal" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-brand-500/40 bg-brand-500/10 text-brand-400 hover:bg-brand-500 hover:text-slate-950 text-xs sm:text-sm font-bold transition-all">
+          <i data-lucide="plus-circle" class="w-4 h-4"></i>
+          <span>Tambah Desain Canva</span>
+        </button>
+
+      </div>
+
+      <!-- Projects Grid (100% Canva Designs) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectsGrid">
+        
+        <!-- REAL PROJECT 1: Coffee Senja Poster -->
+        <div class="project-card glass-card rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/50 hover:shadow-2xl hover:shadow-brand-500/10 transition-all duration-300 flex flex-col group cursor-pointer" data-category="canva produk" onclick="openDetailModal('coffee_senja')">
+          <div class="relative aspect-[3/4] bg-slate-950 overflow-hidden border-b border-slate-800">
+            <img src="Hitam Coffee Time Sederhana Poster.png" alt="Coffee Senja Poster - Fauzi Abidin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+            
+            <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
+              <span class="px-2.5 py-1 rounded-lg bg-amber-500/90 backdrop-blur-md text-slate-950 text-[11px] font-extrabold shadow-md">
+                KARYA ASLI • CANVA
+              </span>
+              <span class="px-2 py-0.5 rounded-md bg-slate-900/80 backdrop-blur-md text-amber-300 text-[10px] font-mono border border-amber-500/30">
+                PRODUK / IKLAN
+              </span>
+            </div>
+
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-end z-10">
+              <span class="text-[11px] text-white/90 font-medium px-2 py-0.5 rounded bg-black/60 backdrop-blur-sm">
+                ☕ Coffee Splash & Dynamic Contrast
+              </span>
+              <span class="w-8 h-8 rounded-full bg-brand-500 text-slate-950 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+                <span>Iklan Komersial F&B</span>
+                <span class="text-amber-400 font-medium">Coffee Senja</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-white group-hover:text-brand-400 transition-colors">
+                Coffee Senja: Your Daily Coffee Poster
+              </h3>
+              <p class="text-slate-400 text-xs sm:text-sm mt-1.5 line-clamp-2">
+                Desain poster promosi kopi Canva dengan efek coffee splash dramatis, cangkir kuning cerah ikonik, biji kopi melayang, dan kontras tinggi di atas kanvas hitam pekat.
+              </p>
+            </div>
+            
+            <div class="flex items-center justify-between pt-4 mt-4 border-t border-slate-800 text-xs font-semibold text-brand-400">
+              <span class="flex items-center gap-1 group-hover:underline">
+                Lihat Detail & Kasus Desain <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </span>
+              <span class="text-slate-500 font-mono">#Canva #Commercial</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- REAL PROJECT 2: Kopi Susu Hari Ini -->
+        <div class="project-card glass-card rounded-3xl overflow-hidden border border-slate-800 hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 flex flex-col group cursor-pointer" data-category="canva produk" onclick="openDetailModal('kopi_susu')">
+          <div class="relative aspect-[3/4] bg-slate-950 overflow-hidden border-b border-slate-800">
+            <img src="kopi susu.png" alt="Kopi Susu Hari Ini - Fauzi Abidin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+
+            <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
+              <span class="px-2.5 py-1 rounded-lg bg-amber-500/90 backdrop-blur-md text-slate-950 text-[11px] font-extrabold shadow-md">
+                KARYA ASLI • CANVA
+              </span>
+              <span class="px-2 py-0.5 rounded-md bg-slate-900/80 backdrop-blur-md text-amber-300 text-[10px] font-mono border border-amber-500/30">
+                KAFE & F&B
+              </span>
+            </div>
+
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-end z-10">
+              <span class="text-[11px] text-white/90 font-medium px-2 py-0.5 rounded bg-black/60 backdrop-blur-sm">
+                🗞️ Flat Lay Aesthetic & Soft Shadow
+              </span>
+              <span class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+                <span>Poster Promosi Menu</span>
+                <span class="text-amber-400 font-medium">Coffee Shop Series</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-white group-hover:text-amber-400 transition-colors">
+                Kopi Susu Hari Ini - Poster Kafe Estetik
+              </h3>
+              <p class="text-slate-400 text-xs sm:text-sm mt-1.5 line-clamp-2">
+                Konsep flat lay hangat perpaduan cangkir kopi berbusa, sendok kayu, bunga segar dan koran vintage dengan tipografi rounded modern yang bersahabat.
+              </p>
+            </div>
+            
+            <div class="flex items-center justify-between pt-4 mt-4 border-t border-slate-800 text-xs font-semibold text-amber-400">
+              <span class="flex items-center gap-1 group-hover:underline">
+                Lihat Detail & Kasus Desain <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </span>
+              <span class="text-slate-500 font-mono">#Canva #FlatLay</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- REAL PROJECT 3: Music Event Festival -->
+        <div class="project-card glass-card rounded-3xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 flex flex-col group cursor-pointer" data-category="canva event" onclick="openDetailModal('poster_musik')">
+          <div class="relative aspect-[3/4] bg-slate-950 overflow-hidden border-b border-slate-800">
+            <img src="poster musik.png" alt="Music Event Festival - Fauzi Abidin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+
+            <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
+              <span class="px-2.5 py-1 rounded-lg bg-cyan-400 backdrop-blur-md text-slate-950 text-[11px] font-extrabold shadow-md">
+                KARYA ASLI • CANVA
+              </span>
+              <span class="px-2 py-0.5 rounded-md bg-slate-900/80 backdrop-blur-md text-cyan-300 text-[10px] font-mono border border-cyan-500/30">
+                EVENT & FESTIVAL
+              </span>
+            </div>
+
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-end z-10">
+              <span class="text-[11px] text-white/90 font-medium px-2 py-0.5 rounded bg-black/60 backdrop-blur-sm">
+                ⚡ Torn Paper & Live Concert
+              </span>
+              <span class="w-8 h-8 rounded-full bg-cyan-400 text-slate-950 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+                <span>Poster Event Musik</span>
+                <span class="text-cyan-400 font-medium">Festival 2026</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-white group-hover:text-cyan-400 transition-colors">
+                Music Event Festival 2026 - Modern Poster
+              </h3>
+              <p class="text-slate-400 text-xs sm:text-sm mt-1.5 line-clamp-2">
+                Perpaduan artistik efek sobekan kertas (torn paper), kontur topografi bertekstur, dan atmosfer megah panggung konser dengan tipografi bold berenergi tinggi.
+              </p>
+            </div>
+            
+            <div class="flex items-center justify-between pt-4 mt-4 border-t border-slate-800 text-xs font-semibold text-cyan-400">
+              <span class="flex items-center gap-1 group-hover:underline">
+                Lihat Detail & Kasus Desain <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </span>
+              <span class="text-slate-500 font-mono">#Canva #EventPoster</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- REAL PROJECT 4: Fashion Localwear -->
+        <div class="project-card glass-card rounded-3xl overflow-hidden border border-slate-800 hover:border-rose-500/50 hover:shadow-2xl hover:shadow-rose-500/10 transition-all duration-300 flex flex-col group cursor-pointer" data-category="canva fashion" onclick="openDetailModal('poster_fashion')">
+          <div class="relative aspect-[3/4] bg-slate-950 overflow-hidden border-b border-slate-800">
+            <img src="poster fashion.png" alt="Localwear Fashion Poster - Fauzi Abidin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+
+            <div class="absolute top-3 left-3 right-3 flex justify-between items-center z-10">
+              <span class="px-2.5 py-1 rounded-lg bg-rose-500 backdrop-blur-md text-white text-[11px] font-extrabold shadow-md">
+                KARYA ASLI • CANVA
+              </span>
+              <span class="px-2 py-0.5 rounded-md bg-slate-900/80 backdrop-blur-md text-rose-300 text-[10px] font-mono border border-rose-500/30">
+                FASHION & EDITORIAL
+              </span>
+            </div>
+
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-end z-10">
+              <span class="text-[11px] text-white/90 font-medium px-2 py-0.5 rounded bg-black/60 backdrop-blur-sm">
+                👗 Terracotta & Magazine Layout
+              </span>
+              <span class="w-8 h-8 rounded-full bg-rose-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="zoom-in" class="w-4 h-4"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+                <span>Katalog Fashion Apparel</span>
+                <span class="text-rose-400 font-medium">Localwear Brand</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-white group-hover:text-rose-400 transition-colors">
+                Localwear: New Collection - Lebih Stylish!
+              </h3>
+              <p class="text-slate-400 text-xs sm:text-sm mt-1.5 line-clamp-2">
+                Desain promosi fashion editorial dengan palet warna terracotta-krem yang hangat, layout asimetris berkelas, dan penempatan CTA penawaran diskon 50%.
+              </p>
+            </div>
+            
+            <div class="flex items-center justify-between pt-4 mt-4 border-t border-slate-800 text-xs font-semibold text-rose-400">
+              <span class="flex items-center gap-1 group-hover:underline">
+                Lihat Detail & Kasus Desain <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </span>
+              <span class="text-slate-500 font-mono">#Canva #FashionDesign</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION: PRODUK DIGITAL & TEMPLATE SIAP PAKAI -->
+    <section id="produk-digital" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/80">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col items-center text-center mb-10">
+        <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold tracking-wider text-amber-400 uppercase bg-amber-500/10 px-3.5 py-1 rounded-full border border-amber-500/25 mb-3">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> TOKO PRODUK DIGITAL RESMI • RP 33.000
+        </span>
+        <h2 class="font-display font-black text-3xl sm:text-4xl text-white">
+          Produk & Template Web Siap Pakai
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base max-w-2xl mt-3 leading-relaxed">
+          Tingkatkan keteraturan finansial dan produktivitas kreasi konten harian Anda. Template interaktif mandiri (<em>standalone web application</em>), responsif di HP & laptop, tanpa biaya langganan bulanan.
+        </p>
+      </div>
+
+      <!-- Bank Account Information Banner -->
+      <div class="mb-10 p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-amber-500/10 via-brand-500/10 to-emerald-500/10 border border-amber-500/30 backdrop-blur-md flex flex-col md:flex-row items-center justify-between gap-5 shadow-xl">
+        <div class="flex items-center gap-4 text-center md:text-left flex-col md:flex-row">
+          <div class="w-14 h-14 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 shrink-0 shadow-lg">
+            <i data-lucide="credit-card" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 justify-center md:justify-start flex-wrap">
+              <span class="text-xs font-mono font-bold text-amber-400 uppercase bg-amber-500/20 px-2.5 py-0.5 rounded-full border border-amber-500/30">Rekening Resmi Pembayaran</span>
+              <span class="text-xs text-slate-300 font-medium">a.n. Fauzi Abidin</span>
+            </div>
+            <div class="flex items-center gap-3 mt-1.5 justify-center md:justify-start flex-wrap">
+              <span class="font-mono font-black text-2xl sm:text-3xl text-white tracking-wider" id="bankAccNumber">901008397024</span>
+              <button onclick="copyRekening('901008397024', this)" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900/90 hover:bg-amber-500 hover:text-slate-950 text-amber-300 border border-amber-500/40 text-xs font-bold transition-all shadow-sm group">
+                <i data-lucide="copy" class="w-3.5 h-3.5 group-hover:scale-110 transition-transform"></i>
+                <span class="copy-label">Salin No. Rekening</span>
+              </button>
+            </div>
+            <p class="text-xs text-slate-400 mt-1">
+              Harga serba <strong class="text-emerald-400 font-bold">Rp 33.000 / produk</strong>. Setelah transfer, kirim bukti transfer ke WhatsApp untuk penerimaan file seketika.
+            </p>
+          </div>
+        </div>
+
+        <div class="shrink-0 flex flex-col sm:flex-row md:flex-col items-center gap-2 w-full md:w-auto">
+          <a href="https://wa.me/6289508049216?text=Halo%20Fauzi%20Abidin,%20saya%20ingin%20membeli%20produk%20digital%20seharga%20Rp%2033.000.%20Mohon%20info%20pembayaran%20ke%20rekening%20901008397024." target="_blank" class="w-full sm:w-auto px-5 py-3 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/25 hover:scale-[1.02] transition-all">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Konfirmasi Pembayaran</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- PRODUCT 1: AuraFinance 2026 -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-slate-800 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all flex flex-col justify-between group relative overflow-hidden">
+          <!-- Ambient Glow Corner -->
+          <div class="absolute -right-20 -top-20 w-48 h-48 rounded-full bg-cyan-500/15 blur-3xl pointer-events-none group-hover:bg-cyan-500/25 transition-all"></div>
+          
+          <div>
+            <!-- Top Badges & Price Tag -->
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+                  <i data-lucide="wallet" class="w-3.5 h-3.5"></i> FINANSIAL & BUDGETING
+                </span>
+                <span class="ml-2 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+                  <i data-lucide="check" class="w-3 h-3"></i> Siap Pakai
+                </span>
+              </div>
+
+              <!-- Price Badge -->
+              <div class="text-right">
+                <span class="text-xs text-slate-500 line-through block">Rp 75.000</span>
+                <div class="flex items-baseline justify-end gap-1">
+                  <span class="font-display font-black text-2xl sm:text-3xl text-white">Rp 33.000</span>
+                </div>
+                <span class="text-[10px] font-mono text-emerald-400 font-semibold block">Sekali Beli • Akses Selamanya</span>
+              </div>
+            </div>
+
+            <!-- Product Image Mockup Banner -->
+            <div class="relative rounded-2xl overflow-hidden mb-5 border border-slate-700/80 bg-slate-950 aspect-[16/9] group-hover:border-cyan-500/50 transition-all shadow-xl">
+              <img src="produk_keuangan_2026.jpg" alt="AuraFinance 2026 - Panduan Cerdas Atur Duit Anti Boncos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg bg-cyan-500/90 text-slate-950 text-[11px] font-black shadow-md flex items-center gap-1">
+                  <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> MOCKUP SISTEM
+                </span>
+                <span class="text-[11px] text-white/90 font-mono bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm">
+                  100% Interaktif
+                </span>
+              </div>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <h3 class="font-display font-black text-xl sm:text-2xl text-white group-hover:text-cyan-400 transition-colors">
+              AuraFinance 2026 — Panduan Cerdas Atur Duit Anti Boncos
+            </h3>
+            <p class="text-slate-400 text-xs sm:text-sm mt-2.5 leading-relaxed">
+              Platform web interaktif all-in-one yang dirancang untuk menguasai alokasi penghasilan bulanan, menabung dengan santai, serta membangun kebiasaan finansial cerdas tanpa pusing.
+            </p>
+
+            <!-- Key Feature List -->
+            <div class="my-5 p-4 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2.5 text-xs text-slate-300">
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="calculator" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+                <span><strong>Kalkulator Alokasi Gaji Otomatis:</strong> Rumus 50/30/20 & Custom Alokasi Dinamis</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="trending-up" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span><strong>Simulator Investasi Cuan:</strong> Proyeksi bunga majemuk & grafik visual interaktif</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="activity" class="w-4 h-4 text-rose-400 shrink-0"></i>
+                <span><strong>Tes Diagnosa Finansial:</strong> Cek skor kesehatan dompet Anda seketika</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="compass" class="w-4 h-4 text-amber-400 shrink-0"></i>
+                <span><strong>5 Pilar Strategi Bebas Boncos:</strong> Mindset, otomatisasi pos uang, dan anti-FOMO</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="smartphone" class="w-4 h-4 text-violet-400 shrink-0"></i>
+                <span><strong>File Web Mandiri (HTML):</strong> Buka langsung di Google Chrome / Browser HP & Laptop</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Action Buttons -->
+          <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center gap-3">
+            <a href="keuangan_2026.html" target="_blank" class="w-full sm:w-1/2 py-3 px-4 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-700 font-semibold text-xs flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="eye" class="w-4 h-4 text-cyan-400"></i>
+              <span>Buka Demo Interaktif</span>
+            </a>
+            <button onclick="openBuyModal('keuangan')" class="w-full sm:w-1/2 py-3 px-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black text-xs flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/25 hover:scale-[1.02] active:scale-[0.98] transition-all">
+              <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+              <span>Beli Sekarang (Rp 33.000)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 2: Creator OS 2026 -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border border-slate-800 hover:border-violet-500/50 hover:shadow-2xl hover:shadow-violet-500/10 transition-all flex flex-col justify-between group relative overflow-hidden">
+          <!-- Ambient Glow Corner -->
+          <div class="absolute -right-20 -top-20 w-48 h-48 rounded-full bg-violet-500/15 blur-3xl pointer-events-none group-hover:bg-violet-500/25 transition-all"></div>
+          
+          <div>
+            <!-- Top Badges & Price Tag -->
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold bg-violet-500/10 text-violet-400 border border-violet-500/30">
+                  <i data-lucide="video" class="w-3.5 h-3.5"></i> CONTENT CREATOR OS
+                </span>
+                <span class="ml-2 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-pink-500/15 text-pink-400 border border-pink-500/30">
+                  <i data-lucide="sparkles" class="w-3 h-3"></i> Best Value
+                </span>
+              </div>
+
+              <!-- Price Badge -->
+              <div class="text-right">
+                <span class="text-xs text-slate-500 line-through block">Rp 75.000</span>
+                <div class="flex items-baseline justify-end gap-1">
+                  <span class="font-display font-black text-2xl sm:text-3xl text-white">Rp 33.000</span>
+                </div>
+                <span class="text-[10px] font-mono text-emerald-400 font-semibold block">Sekali Beli • Akses Selamanya</span>
+              </div>
+            </div>
+
+            <!-- Product Image Mockup Banner -->
+            <div class="relative rounded-2xl overflow-hidden mb-5 border border-slate-700/80 bg-slate-950 aspect-[16/9] group-hover:border-violet-500/50 transition-all shadow-xl">
+              <img src="produk_creator_os.jpg" alt="Creator OS 2026 - Master Schedule & High-Income Blueprint" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                <span class="px-2.5 py-1 rounded-lg bg-violet-500/90 text-white text-[11px] font-black shadow-md flex items-center gap-1">
+                  <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> MOCKUP SISTEM
+                </span>
+                <span class="text-[11px] text-white/90 font-mono bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm">
+                  100% Interaktif
+                </span>
+              </div>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <h3 class="font-display font-black text-xl sm:text-2xl text-white group-hover:text-violet-400 transition-colors">
+              Creator OS 2026 • Master Schedule & High-Income Blueprint
+            </h3>
+            <p class="text-slate-400 text-xs sm:text-sm mt-2.5 leading-relaxed">
+              Sistem kerja harian dan manajemen alur konten terlengkap untuk konten kreator masa kini. Membantu Anda disiplin posting harian, anti-burnout, dan temukan ide konten viral.
+            </p>
+
+            <!-- Key Feature List -->
+            <div class="my-5 p-4 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2.5 text-xs text-slate-300">
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="calendar" class="w-4 h-4 text-violet-400 shrink-0"></i>
+                <span><strong>Daily Routine Checklist:</strong> Jadwal terstruktur harian dari bangun subuh hingga malam</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="zap" class="w-4 h-4 text-yellow-400 shrink-0"></i>
+                <span><strong>Viral Hooks Bank:</strong> Formula & template pembuka video FYP siap pakai</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="trophy" class="w-4 h-4 text-amber-400 shrink-0"></i>
+                <span><strong>Gamifikasi Kreator & XP:</strong> Sound effect audio interaktif & selebrasi confetti</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="clock" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+                <span><strong>Jam Realtime & Focus Timer:</strong> Stopwatch produktivitas kerja kreatif</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="moon" class="w-4 h-4 text-pink-400 shrink-0"></i>
+                <span><strong>Cyberpunk Dark & Light Mode:</strong> Tampilan visual super estetik & futuristik</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Action Buttons -->
+          <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center gap-3">
+            <a href="jadwal_content_creator.html" target="_blank" class="w-full sm:w-1/2 py-3 px-4 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-700 font-semibold text-xs flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="eye" class="w-4 h-4 text-violet-400"></i>
+              <span>Buka Demo Interaktif</span>
+            </a>
+            <button onclick="openBuyModal('creator_os')" class="w-full sm:w-1/2 py-3 px-4 rounded-xl bg-gradient-to-r from-violet-600 via-pink-600 to-amber-500 hover:from-violet-500 hover:to-amber-400 text-white font-black text-xs flex items-center justify-center gap-2 shadow-lg shadow-violet-500/25 hover:scale-[1.02] active:scale-[0.98] transition-all">
+              <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+              <span>Beli Sekarang (Rp 33.000)</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bundle Special Promo Card -->
+      <div class="mt-8 p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-slate-900 via-brand-950/40 to-slate-900 border border-brand-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4 text-center md:text-left flex-col md:flex-row">
+          <div class="w-12 h-12 rounded-2xl bg-brand-500/20 border border-brand-500/40 flex items-center justify-center text-brand-400 shrink-0">
+            <i data-lucide="gift" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 justify-center md:justify-start flex-wrap">
+              <h4 class="font-display font-extrabold text-lg text-white">Paket Komplit Hemat (Bundle Kedua Produk)</h4>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-mono font-bold">Hemat Rp 16.000</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-1 max-w-xl">
+              Dapatkan langsung kedua produk digital (<strong>AuraFinance 2026</strong> + <strong>Creator OS 2026</strong>) sekaligus dengan harga spesial hemat hanya <strong>Rp 50.000</strong> ke rekening <span class="font-mono font-bold text-white">901008397024</span>.
+            </p>
+          </div>
+        </div>
+
+        <a href="https://wa.me/6289508049216?text=Halo%20Fauzi%20Abidin,%20saya%20ingin%20membeli%20Paket%20Bundle%20Komplit%20(AuraFinance%202026%20+%20Creator%20OS%202026)%20seharga%20Rp%2050.000%20ke%20rekening%20901008397024." target="_blank" class="w-full md:w-auto px-6 py-3.5 rounded-2xl bg-brand-500 hover:bg-brand-400 text-slate-950 font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-xl shadow-brand-500/20 shrink-0 hover:scale-105 active:scale-95 transition-all">
+          <i data-lucide="package" class="w-4 h-4"></i>
+          <span>Pesan Paket Bundle (Rp 50.000)</span>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- SECTION: PENDIDIKAN & PENGALAMAN (TIMELINE) -->
+    <section id="riwayat" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/80">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col items-center text-center mb-12">
+        <span class="text-xs font-mono font-semibold tracking-widest text-brand-400 uppercase bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20 mb-3">
+          REKAM JEJAK
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+          Pendidikan & Pengalaman Kerja
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base max-w-2xl mt-3">
+          Kombinasi pembinaan karakter pondok pesantren, pembelajaran multimedia intensif, dan pengalaman dunia kerja nyata.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        
+        <!-- Left Column: Pendidikan -->
+        <div class="flex flex-col gap-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-400">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white">Riwayat Pendidikan</h3>
+          </div>
+
+          <div class="relative pl-6 border-l-2 border-slate-800 flex flex-col gap-8">
+            
+            <!-- Edu 1: Pondok Multimedia Munzalan -->
+            <div class="relative group">
+              <!-- Timeline Pin -->
+              <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brand-500 ring-4 ring-slate-900 group-hover:scale-125 transition-transform"></div>
+              
+              <div class="glass-card p-5 rounded-2xl border border-slate-800 hover:border-brand-500/40 transition-all">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-xs font-mono font-bold text-brand-400 bg-brand-500/10 px-2.5 py-0.5 rounded">2025 - 2026</span>
+                  <span class="text-xs text-slate-400">Keahlian Khusus</span>
+                </div>
+                <h4 class="font-display font-bold text-base sm:text-lg text-white mt-1">Pondok Multimedia Munzalan</h4>
+                <p class="text-xs text-slate-300 font-medium">Program Keahlian Multimedia & Konten Kreator</p>
+                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                  Pendidikan intensif memfokuskan santri pada kompetensi multimedia terapan: desain grafis digital, videografi, alur editing profesional, manajemen sosial media, dan pembentukan portofolio kreatif.
+                </p>
+              </div>
+            </div>
+
+            <!-- Edu 2: Pondok Askar Kauny -->
+            <div class="relative group">
+              <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-slate-900 group-hover:bg-brand-400 transition-colors"></div>
+              
+              <div class="glass-card p-5 rounded-2xl border border-slate-800 hover:border-brand-500/40 transition-all">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-xs font-mono font-bold text-slate-300 bg-slate-800 px-2.5 py-0.5 rounded">2021 - 2025</span>
+                  <span class="text-xs text-slate-400">Pendidikan Menengah</span>
+                </div>
+                <h4 class="font-display font-bold text-base sm:text-lg text-white mt-1">Pondok Askar Kauny</h4>
+                <p class="text-xs text-slate-300 font-medium">Tahfidz & Pembinaan Karakter Santri</p>
+                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                  Menempa disiplin, kemandirian, adab, hafalan, serta dasar kepemimpinan dan organisasi yang menjadi fondasi integritas kerja.
+                </p>
+              </div>
+            </div>
+
+            <!-- Edu 3: MI Darus Sa'adah -->
+            <div class="relative group">
+              <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-800 ring-4 ring-slate-900"></div>
+              
+              <div class="glass-card p-5 rounded-2xl border border-slate-800 hover:border-brand-500/40 transition-all">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-xs font-mono font-bold text-slate-400 bg-slate-800 px-2.5 py-0.5 rounded">2015 - 2021</span>
+                  <span class="text-xs text-slate-500">Pendidikan Dasar</span>
+                </div>
+                <h4 class="font-display font-bold text-base text-white mt-1">MI Darus Sa'adah</h4>
+                <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                  Menyelesaikan pendidikan dasar madrasah ibtidaiyah dengan nilai baik dan dasar pemahaman agama yang kokoh.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Pengalaman Kerja & Magang -->
+        <div class="flex flex-col gap-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-xl bg-creative-indigo/10 border border-creative-indigo/30 flex items-center justify-center text-creative-indigo">
+              <i data-lucide="briefcase" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white">Pengalaman Kerja & Kontribusi</h3>
+          </div>
+
+          <div class="relative pl-6 border-l-2 border-slate-800 flex flex-col gap-8">
+            
+            <!-- Exp 1: Magang Yoshugi Media Group -->
+            <div class="relative group">
+              <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-creative-indigo ring-4 ring-slate-900 group-hover:scale-125 transition-transform"></div>
+              
+              <div class="glass-card p-5 rounded-2xl border border-slate-800 hover:border-creative-indigo/40 transition-all">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-xs font-mono font-bold text-creative-indigo bg-indigo-500/10 px-2.5 py-0.5 rounded border border-indigo-500/20">MAGANG INDUSTRI</span>
+                  <span class="text-xs text-slate-400 font-mono">Agensi Media</span>
+                </div>
+                <h4 class="font-display font-bold text-base sm:text-lg text-white mt-1">Kantor Yoshugi Media Group</h4>
+                <p class="text-xs text-indigo-300 font-medium">Internship Tim Kreatif & Produksi Media</p>
+                <ul class="text-xs text-slate-300 mt-2.5 space-y-1.5 list-disc list-inside">
+                  <li>Terlibat dalam pembuatan materi desain grafis promosi untuk klien agensi.</li>
+                  <li>Membantu proses riset tren visual dan pembuatan carousel feed sosial media.</li>
+                  <li>Berkoordinasi dalam tim kreatif profesional dengan alur kerja deadline industri.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Exp 2: Pengajar Pondok Askar Kauny -->
+            <div class="relative group">
+              <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-slate-900 group-hover:scale-125 transition-transform"></div>
+              
+              <div class="glass-card p-5 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition-all">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/20">PENGAJAR & MENTOR</span>
+                  <span class="text-xs text-slate-400 font-mono">Pendidikan</span>
+                </div>
+                <h4 class="font-display font-bold text-base sm:text-lg text-white mt-1">Pondok Askar Kauny</h4>
+                <p class="text-xs text-emerald-300 font-medium">Pengajar & Pembimbing Santri</p>
+                <ul class="text-xs text-slate-300 mt-2.5 space-y-1.5 list-disc list-inside">
+                  <li>Mengajar dan membimbing adik santri dalam pelajaran dan pembinaan harian.</li>
+                  <li>Melatih kemampuan public speaking, komunikasi persuasif, dan empati interpersonal.</li>
+                  <li>Membantu pembuatan materi ajar visual yang menarik dan mudah dipahami santri.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SECTION: ALUR KERJA (DESIGN WORKFLOW) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/80">
+      <div class="glass-card p-8 sm:p-10 rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/80 to-slate-950">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-xs font-mono text-brand-400 tracking-widest uppercase">PROSES KREATIF</span>
+          <h3 class="font-display font-bold text-2xl sm:text-3xl text-white mt-1">Bagaimana Saya Mengerjakan Desain</h3>
+          <p class="text-slate-400 text-xs sm:text-sm mt-2">Pendekatan terstruktur agar setiap karya sesuai dengan kebutuhan dan target audiens Anda.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex flex-col gap-2">
+            <span class="font-mono text-2xl font-black text-brand-400">01</span>
+            <h4 class="font-bold text-sm text-white">Brief & Pemahaman</h4>
+            <p class="text-xs text-slate-400">Mendengarkan tujuan desain, target pembaca, pesan utama, dan ukuran media yang diinginkan.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex flex-col gap-2">
+            <span class="font-mono text-2xl font-black text-creative-indigo">02</span>
+            <h4 class="font-bold text-sm text-white">Konsep & Moodboard</h4>
+            <p class="text-xs text-slate-400">Menentukan harmoni warna, gaya tipografi, dan referensi visual yang paling relevan.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex flex-col gap-2">
+            <span class="font-mono text-2xl font-black text-violet-400">03</span>
+            <h4 class="font-bold text-sm text-white">Eksekusi Kreatif</h4>
+            <p class="text-xs text-slate-400">Merancang di Canva Pro atau editing di CapCut dengan ketelitian tata letak dan detail elemen.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex flex-col gap-2">
+            <span class="font-mono text-2xl font-black text-emerald-400">04</span>
+            <h4 class="font-bold text-sm text-white">Review & Pengiriman</h4>
+            <p class="text-xs text-slate-400">Menyempurnakan hasil sesuai masukan hingga tuntas dan mengirimkan file resolusi tinggi (PNG/PDF/MP4).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: KONTAK & AJAKAN KOLABORASI (CONTACT) -->
+    <section id="kontak" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/80">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left CTA Message -->
+        <div class="lg:col-span-6 flex flex-col gap-6">
+          <span class="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-widest text-emerald-400 uppercase bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20 w-max">
+            <i data-lucide="sparkle" class="w-3.5 h-3.5"></i> MARI BERKOLABORASI
+          </span>
+
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
+            Punya Ide Desain atau Kebutuhan Konten? <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-amber-400 to-emerald-400">Mari Wujudkan Bersama!</span>
+          </h2>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Apakah Anda memerlukan desain poster, konten Instagram, materi presentasi, banner acara, atau editing video promosi untuk sekolah, pondok, UMKM, ataupun instansi? Jangan ragu untuk menghubungi saya!
+          </p>
+
+          <!-- Contact Quick Badges -->
+          <div class="flex flex-col gap-3.5">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6289508049216?text=Halo%20Fauzi%20Abidin,%20saya%20tertarik%20dengan%20portofolio%20desain%20grafis%20kamu." target="_blank" class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/40 hover:bg-slate-850 flex items-center gap-4 transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
+                <i data-lucide="phone-call" class="w-6 h-6"></i>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xs text-slate-400">WhatsApp / Telepon</span>
+                <span class="font-bold text-white group-hover:text-emerald-400 transition-colors">+62 895-0804-9216</span>
+              </div>
+              <i data-lucide="chevron-right" class="w-5 h-5 text-slate-600 ml-auto group-hover:text-emerald-400 group-hover:translate-x-1 transition-all"></i>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:f3967541@gmail.com" class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-brand-500/40 hover:bg-slate-850 flex items-center gap-4 transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-brand-500/20 border border-brand-500/30 flex items-center justify-center text-brand-400 group-hover:scale-110 transition-transform">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xs text-slate-400">Email Resmi</span>
+                <span class="font-bold text-white group-hover:text-brand-400 transition-colors">f3967541@gmail.com</span>
+              </div>
+              <i data-lucide="chevron-right" class="w-5 h-5 text-slate-600 ml-auto group-hover:text-brand-400 group-hover:translate-x-1 transition-all"></i>
+            </a>
+
+            <!-- Location -->
+            <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xs text-slate-400">Domisili</span>
+                <span class="font-semibold text-white">Padukuhan Mendiro, Sleman, D.I. Yogyakarta</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Direct Message Form -->
+        <div class="lg:col-span-6">
+          <div class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl">
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">Kirim Pesan Langsung</h3>
+            <p class="text-xs text-slate-400 mb-6">Formulir ini akan otomatis terhubung ke WhatsApp Fauzi Abidin dengan pesan yang sudah Anda siapkan.</p>
+
+            <form id="contactForm" class="flex flex-col gap-4" onsubmit="handleContactSubmit(event)">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="senderName">Nama Lengkap / Instansi</label>
+                <input type="text" id="senderName" required placeholder="Contoh: Budi Santoso / Panitia Acara" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-400 transition-colors">
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="projectType">Kebutuhan Desain Grafis</label>
+                <select id="projectType" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-brand-400 transition-colors">
+                  <option value="Desain Poster / Flyer Promosi (Canva)">Desain Poster / Flyer Promosi (Canva)</option>
+                  <option value="Desain Konten Instagram Feed & Carousel (Canva)">Desain Konten Instagram Feed & Carousel (Canva)</option>
+                  <option value="Desain Iklan Produk & Menu F&B (Canva)">Desain Iklan Produk & Menu F&B (Canva)</option>
+                  <option value="Desain Banner & Spanduk Kegiatan (Canva)">Desain Banner & Spanduk Kegiatan (Canva)</option>
+                  <option value="Desain Poster Event / Festival (Canva)">Desain Poster Event / Festival (Canva)</option>
+                  <option value="Beli Produk: AuraFinance 2026 (Rp 33.000)">Beli Produk: AuraFinance 2026 (Rp 33.000)</option>
+                  <option value="Beli Produk: Creator OS 2026 (Rp 33.000)">Beli Produk: Creator OS 2026 (Rp 33.000)</option>
+                  <option value="Beli Bundle: AuraFinance + Creator OS (Rp 50.000)">Beli Bundle Kedua Produk (Rp 50.000)</option>
+                  <option value="Proyek Desain Grafis Canva Lainnya">Proyek Desain Grafis Canva Lainnya</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="senderMessage">Deskripsi Singkat / Pesan</label>
+                <textarea id="senderMessage" rows="4" required placeholder="Ceritakan ide atau jadwal yang Anda butuhkan..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-400 transition-colors resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30 hover:shadow-emerald-600/50 hover:scale-[1.01] active:scale-[0.99] transition-all">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Kirim via WhatsApp Sekarang</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-slate-950/80 py-10 relative z-10 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl overflow-hidden border border-amber-500/30 bg-slate-950 p-1 shrink-0 shadow-md">
+          <img src="logo_fa.png" alt="FA Monogram Logo" class="w-full h-full object-contain rounded-lg">
+        </div>
+        <div>
+          <p class="font-bold text-slate-200">Fauzi Abidin • Portofolio Desain Grafis</p>
+          <p class="text-[11px] text-slate-500">Pelajar Santri & Kreator Multimedia (Sleman, DIY)</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#tentang" class="hover:text-white transition-colors">Tentang</a>
+        <a href="#keahlian" class="hover:text-white transition-colors">Keahlian</a>
+        <a href="#portofolio" class="hover:text-white transition-colors">Portofolio</a>
+        <a href="#produk-digital" class="hover:text-amber-400 transition-colors">Produk Digital</a>
+        <a href="Fauzi Abidin cv.pdf" target="_blank" class="hover:text-brand-400 transition-colors flex items-center gap-1">
+          <i data-lucide="file-text" class="w-3.5 h-3.5"></i> PDF CV
+        </a>
+      </div>
+
+      <div class="text-[11px] text-slate-500 text-center sm:text-right">
+        &copy; 2026 Fauzi Abidin. Dibuat dengan passion desain & teknologi.
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX / DETAIL MODAL -->
+  <div id="detailModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md">
+    <div class="glass-card w-full max-w-3xl rounded-3xl border border-slate-700 p-6 sm:p-8 max-h-[90vh] overflow-y-auto relative animate-in fade-in zoom-in-95 duration-200" id="detailModalContent">
+      <button onclick="closeDetailModal()" class="absolute top-5 right-5 p-2 rounded-xl bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition-all z-20">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div id="modalBody">
+        <!-- Content dynamically injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD PROJECT MODAL (INTERACTIVE FOR FAUZI) -->
+  <div id="addProjectModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+    <div class="glass-card w-full max-w-xl rounded-3xl border border-slate-700 p-6 sm:p-8 max-h-[90vh] overflow-y-auto relative animate-in fade-in zoom-in-95 duration-200">
+      <button onclick="closeAddProjectModal()" class="absolute top-5 right-5 p-2 rounded-xl bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition-all">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-1">Tambah Desain Canva Baru</h3>
+      <p class="text-xs text-slate-400 mb-6">Tambahkan hasil karya desain Canva asli Anda ke galeri portofolio ini. Data disimpan langsung di browser Anda.</p>
+
+      <form id="addProjectForm" onsubmit="handleAddProject(event)" class="flex flex-col gap-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Judul Karya Desain</label>
+          <input type="text" id="newTitle" required placeholder="Contoh: Poster Iklan Minuman Boba" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-400">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Kategori Desain Canva</label>
+            <select id="newCategory" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-400">
+              <option value="produk">Promosi & F&B (Canva)</option>
+              <option value="event">Poster Event & Musik (Canva)</option>
+              <option value="fashion">Fashion & Editorial (Canva)</option>
+              <option value="dakwah">Poster Dakwah & Edukasi (Canva)</option>
+              <option value="sosmed">Instagram Feed & Carousel (Canva)</option>
+              <option value="banner">Banner & Spanduk Cetak (Canva)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Alat Desain</label>
+            <input type="text" id="newTools" value="Canva Pro" placeholder="Canva Pro, Typography, dsb." class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-400">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Pilih Gambar Karya (Opsional)</label>
+          <input type="file" id="newImageFile" accept="image/*" class="w-full text-xs text-slate-400 file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-brand-500/20 file:text-brand-300 hover:file:bg-brand-500/30">
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Deskripsi Karya</label>
+          <textarea id="newDescription" rows="3" required placeholder="Ceritakan konsep, target, dan hasil dari desain ini..." class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-brand-400 resize-none"></textarea>
+        </div>
+
+        <div class="flex gap-3 pt-2">
+          <button type="button" onclick="closeAddProjectModal()" class="flex-1 py-3 rounded-xl border border-slate-700 hover:bg-slate-800 text-slate-300 text-xs font-bold transition-all">
+            Batal
+          </button>
+          <button type="submit" class="flex-1 py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-slate-950 text-xs font-bold transition-all shadow-lg shadow-brand-500/25">
+            Simpan ke Galeri
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL PEMBELIAN PRODUK DIGITAL -->
+  <div id="buyProductModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md">
+    <div class="glass-card w-full max-w-lg rounded-3xl border border-slate-700 p-6 sm:p-8 max-h-[90vh] overflow-y-auto relative animate-in fade-in zoom-in-95 duration-200">
+      <button onclick="closeBuyModal()" class="absolute top-5 right-5 p-2 rounded-xl bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition-all">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400" id="buyModalIcon">
+          <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">Checkout Produk Digital</span>
+          <h3 class="font-display font-bold text-xl text-white" id="buyModalTitle">Detail Pembelian Produk</h3>
+        </div>
+      </div>
+
+      <!-- Product Summary Box -->
+      <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 mb-5">
+        <div class="flex items-center gap-3.5 mb-3.5 pb-3 border-b border-slate-800">
+          <img id="buyModalProductImg" src="produk_keuangan_2026.jpg" alt="Preview Produk" class="w-20 h-12 rounded-xl object-cover border border-slate-700 shrink-0 shadow-lg">
+          <div class="min-w-0 flex-1">
+            <span class="text-[10px] font-mono text-amber-400 font-bold block uppercase tracking-wider">Produk Siap Pakai</span>
+            <span class="text-xs font-bold text-white line-clamp-1" id="buyModalProductName">AuraFinance 2026</span>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mb-1.5">
+          <span class="text-xs text-slate-400">Tipe Lisensi:</span>
+          <span class="text-xs font-semibold text-emerald-400">Akses Penuh Selamanya (Single Purchase)</span>
+        </div>
+        <div class="flex justify-between items-center pt-2 border-t border-slate-800 text-sm">
+          <span class="font-bold text-slate-300">Total Pembayaran:</span>
+          <span class="font-mono font-black text-xl text-amber-400" id="buyModalPrice">Rp 33.000</span>
+        </div>
+      </div>
+
+      <!-- Bank Transfer Details -->
+      <div class="p-5 rounded-2xl bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 mb-5">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-mono font-bold text-amber-300 uppercase">Rekening Tujuan Transfer:</span>
+          <span class="text-[11px] text-slate-400">a.n. Fauzi Abidin</span>
+        </div>
+        <div class="flex items-center justify-between gap-2 p-3 rounded-xl bg-slate-950/90 border border-slate-800">
+          <span class="font-mono font-black text-xl sm:text-2xl text-white tracking-wider">901008397024</span>
+          <button onclick="copyRekening('901008397024', this)" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 transition-all">
+            <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+            <span class="copy-label">Salin</span>
+          </button>
+        </div>
+        <p class="text-[11px] text-slate-400 mt-2 leading-relaxed">
+          Silakan transfer tepat sejumlah <strong class="text-white" id="buyModalTransferAmount">Rp 33.000</strong> ke nomor rekening di atas melalui Mobile Banking / ATM / Dompet Digital.
+        </p>
+      </div>
+
+      <!-- 3 Steps Instructions -->
+      <div class="space-y-2 mb-6 text-xs text-slate-300">
+        <div class="flex items-start gap-2.5">
+          <span class="w-5 h-5 rounded-full bg-slate-800 text-amber-400 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">1</span>
+          <span>Transfer sejumlah <strong>Rp 33.000</strong> ke rekening <strong>901008397024</strong>.</span>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <span class="w-5 h-5 rounded-full bg-slate-800 text-amber-400 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">2</span>
+          <span>Simpan tangkapan layar (screenshot) struk / resi bukti transfer.</span>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <span class="w-5 h-5 rounded-full bg-slate-800 text-amber-400 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">3</span>
+          <span>Klik tombol di bawah untuk konfirmasi ke WhatsApp Fauzi Abidin, dan file aplikasi HTML mandiri akan langsung dikirimkan ke Anda!</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col gap-2.5">
+        <a id="buyModalWaBtn" href="#" target="_blank" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30 transition-all">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Konfirmasi Bukti Transfer via WhatsApp</span>
+        </a>
+        <a id="buyModalDemoBtn" href="#" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs flex items-center justify-center gap-1.5 transition-all">
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          <span>Coba Pratinjau Demo Terlebih Dahulu</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Initialize Lucide Icons
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      loadCustomProjects();
+    });
+
+    // Theme Switcher (Dark / Light)
+    const themeToggle = document.getElementById('themeToggle');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+
+    // Check stored theme
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+      sunIcon.classList.remove('hidden');
+      moonIcon.classList.add('hidden');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+        localStorage.setItem('theme', 'light');
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      } else {
+        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('wheel');
+        moonIcon.classList.remove('hidden');
+      }
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Filter Portofolio Tabs
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('active', 'bg-brand-500', 'text-slate-950', 'font-bold');
+          b.classList.add('text-slate-400');
+        });
+        btn.classList.add('active', 'bg-brand-500', 'text-slate-950', 'font-bold');
+        btn.classList.remove('text-slate-400');
+
+        const filter = btn.getAttribute('data-filter');
+        projectCards.forEach(card => {
+          const categories = (card.getAttribute('data-category') || '').split(' ');
+          if (filter === 'all' || categories.includes(filter)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Database Detail Projects
+    const projectDetails = {
+      coffee_senja: {
+        title: "Coffee Senja: Your Daily Coffee Poster",
+        category: "Commercial Product Ads • Canva Pro",
+        tools: "Canva Pro, Dynamic Splash Manipulation, Floating Elements, High Contrast Canvas",
+        client: "Coffee Senja Brand (Produk Komersial)",
+        image: "Hitam Coffee Time Sederhana Poster.png",
+        challenge: "Menciptakan iklan produk kopi yang dinamis, bertenaga, dan langsung menarik perhatian di tengah padatnya linimasa media sosial dengan penawaran diskon 15%.",
+        solution: "Memadukan efek coffee splash realistis pada cangkir kuning cerah dengan biji kopi sangrai yang melayang (floating roasted beans). Latar belakang kanvas hitam bertekstur arang menciptakan kontras tinggi yang mempertegas elemen utama dan tombol Call to Action (CTA) pemesanan antar.",
+        result: "Desain dinamis dengan stopping power tinggi yang sangat efektif untuk poster meja kasir, promosi digital, dan Instagram Ads."
+      },
+      kopi_susu: {
+        title: "Kopi Susu Hari Ini - Poster Kafe Estetik",
+        category: "Poster Promosi Kuliner • F&B",
+        tools: "Canva Pro, Flat Lay Aesthetic, Soft Shadow Composition, Modern Typography",
+        client: "Kedai Kopi & F&B Branding (Lokal)",
+        image: "kopi susu.png",
+        challenge: "Mendesain poster promosi minuman kopi susu yang menonjolkan kehangatan, kenyamanan (cozy morning vibe), dan memicu selera audiens baik di media cetak kafe maupun media sosial.",
+        solution: "Menggunakan sudut pandang top-down (flat lay) dengan tekstur koran vintage dan kelopak bunga daffodil kuning cerah sebagai penyeimbang. Tipografi bold rounded sans-serif dengan bayangan lembut memberikan kesan modern, ramah, dan sangat catchy.",
+        result: "Komposisi visual yang estetik dan instagrammable, sukses meningkatkan daya tarik produk kopi susu harian bagi pelanggan kafe."
+      },
+      poster_musik: {
+        title: "Music Event Festival 2026 - Modern Poster",
+        category: "Event & Entertainment Poster • Canva Pro",
+        tools: "Canva Pro, Torn Paper Effect, Topographic Vector Art, Concert Atmosphere",
+        client: "Komite Festival Musik & Kreator Muda",
+        image: "poster musik.png",
+        challenge: "Menggabungkan energi konser musik langsung dengan gaya desain modern bertema grafis streetwear untuk menarik minat generasi muda.",
+        solution: "Mengaplikasikan efek torn paper (sobekan kertas artistik) untuk memisahkan tekstur kontur topografi hitam di bagian atas dengan siluet atmosfer panggung konser berlampu hangat di bagian bawah. Tipografi judul condensed bold dalam blok warna cyan/toska memberikan ketegasan informasi tanggal dan ajakan pendaftaran gratis (Free Entry).",
+        result: "Poster event berkarakter kuat, energik, dan sangat mudah dikenali bahkan saat dilihat sekilas dari kejauhan."
+      },
+      poster_fashion: {
+        title: "Localwear New Collection: Lebih Stylish! - Fashion Catalog",
+        category: "Fashion Editorial & Apparel Ads • Canva Pro",
+        tools: "Canva Pro, Editorial Magazine Layout, Color-Blocking Terracotta",
+        client: "Brand Apparel Lokal 'Localwear'",
+        image: "poster fashion.png",
+        challenge: "Merancang materi promosi peluncuran koleksi pakaian kasual modern yang stylish dengan penawaran diskon hingga 50%.",
+        solution: "Menerapkan teknik color-blocking harmonis bernuansa terracotta / brick red dan krem hangat. Komposisi meletakkan model di tengah dengan tipografi asimetris editorial magazine ('lebih stylish!'), dipermanis aksen geometric dots dan tombol CTA elegan di sudut bawah.",
+        result: "Tampilan poster berstandar majalah mode internasional (high-end look), meningkatkan citra brand lokal menjadi lebih bergengsi dan diminati kaum muda."
+      }
+    };
+
+    // Open Lightbox Detail Modal
+    function openDetailModal(id) {
+      const p = projectDetails[id];
+      if (!p) return;
+
+      const modalBody = document.getElementById('modalBody');
+      const imgHtml = p.image ? `
+        <div class="mb-6 rounded-2xl overflow-hidden border border-slate-700 bg-slate-950 flex flex-col items-center">
+          <div class="relative max-h-[500px] w-full flex items-center justify-center p-3 bg-slate-950/70">
+            <img src="${p.image}" alt="${p.title}" class="max-h-[480px] w-auto object-contain rounded-xl shadow-2xl">
+          </div>
+          <div class="w-full bg-slate-900/95 px-4 py-2.5 flex items-center justify-between border-t border-slate-800 text-xs">
+            <span class="text-slate-300 font-medium flex items-center gap-1.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Karya Desain Grafis Asli Fauzi Abidin
+            </span>
+            <a href="${p.image}" target="_blank" class="text-brand-400 hover:text-brand-300 font-bold flex items-center gap-1 bg-slate-800 px-3 py-1 rounded-lg hover:bg-slate-700 transition-all">
+              <span>Buka Gambar Penuh</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+      ` : '';
+
+      modalBody.innerHTML = `
+        ${imgHtml}
+        <span class="text-xs font-mono font-bold text-brand-400 bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">${p.category}</span>
+        <h2 class="font-display font-black text-2xl sm:text-3xl text-white mt-3">${p.title}</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-5 p-4 rounded-2xl bg-slate-900/80 border border-slate-800 text-xs">
+          <div>
+            <span class="text-slate-400 block">Klien / Kategori:</span>
+            <span class="font-semibold text-white">${p.client}</span>
+          </div>
+          <div>
+            <span class="text-slate-400 block">Software & Teknik:</span>
+            <span class="font-semibold text-brand-400">${p.tools}</span>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-xs sm:text-sm text-slate-300">
+          <div>
+            <h4 class="font-bold text-white mb-1 flex items-center gap-1.5">
+              <i data-lucide="target" class="w-4 h-4 text-rose-400"></i> Tantangan Desain:
+            </h4>
+            <p class="leading-relaxed text-slate-400">${p.challenge}</p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-white mb-1 flex items-center gap-1.5">
+              <i data-lucide="lightbulb" class="w-4 h-4 text-amber-400"></i> Solusi Pendekatan Visual:
+            </h4>
+            <p class="leading-relaxed text-slate-400">${p.solution}</p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-white mb-1 flex items-center gap-1.5">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i> Dampak & Hasil:
+            </h4>
+            <p class="leading-relaxed text-slate-400">${p.result}</p>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-5 border-t border-slate-800 flex flex-wrap justify-between items-center gap-3">
+          <a href="https://wa.me/6289508049216?text=Halo%20Fauzi,%20saya%20tertarik%20dengan%20karya%20desain%20${encodeURIComponent(p.title)}" target="_blank" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-xs flex items-center gap-2 shadow-lg shadow-emerald-600/25">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> Buat Desain Serupa via WhatsApp
+          </a>
+          <button onclick="closeDetailModal()" class="px-5 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold hover:bg-slate-700">Tutup</button>
+        </div>
+      `;
+
+      document.getElementById('detailModal').classList.remove('hidden');
+      document.getElementById('detailModal').classList.add('flex');
+      lucide.createIcons();
+    }
+
+    function closeDetailModal() {
+      document.getElementById('detailModal').classList.add('hidden');
+      document.getElementById('detailModal').classList.remove('flex');
+    }
+
+    // Modal Close On Outside Click
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('detailModal');
+      if (e.target === modal) closeDetailModal();
+
+      const addModal = document.getElementById('addProjectModal');
+      if (e.target === addModal) closeAddProjectModal();
+    });
+
+    // Add Custom Project Handlers
+    const openAddProjectModalBtn = document.getElementById('openAddProjectModal');
+    openAddProjectModalBtn.addEventListener('click', () => {
+      document.getElementById('addProjectModal').classList.remove('hidden');
+      document.getElementById('addProjectModal').classList.add('flex');
+    });
+
+    function closeAddProjectModal() {
+      document.getElementById('addProjectModal').classList.add('hidden');
+      document.getElementById('addProjectModal').classList.remove('flex');
+    }
+
+    function handleAddProject(e) {
+      e.preventDefault();
+      const title = document.getElementById('newTitle').value;
+      const category = document.getElementById('newCategory').value;
+      const tools = document.getElementById('newTools').value || 'Canva Pro';
+      const desc = document.getElementById('newDescription').value;
+      const fileInput = document.getElementById('newImageFile');
+
+      const reader = new FileReader();
+      const saveCard = (imgSrc) => {
+        const customProject = {
+          title,
+          category,
+          tools,
+          desc,
+          imgSrc: imgSrc || null,
+          date: new Date().toLocaleDateString('id-ID')
+        };
+
+        const existing = JSON.parse(localStorage.getItem('fauzi_custom_projects') || '[]');
+        existing.unshift(customProject);
+        localStorage.setItem('fauzi_custom_projects', JSON.stringify(existing));
+
+        // Confetti celebration!
+        confetti({
+          particleCount: 80,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+
+        closeAddProjectModal();
+        document.getElementById('addProjectForm').reset();
+        loadCustomProjects();
+      };
+
+      if (fileInput.files && fileInput.files[0]) {
+        reader.onload = function(evt) {
+          saveCard(evt.target.result);
+        };
+        reader.readAsDataURL(fileInput.files[0]);
+      } else {
+        saveCard(null);
+      }
+    }
+
+    function loadCustomProjects() {
+      const container = document.getElementById('projectsGrid');
+      const customProjects = JSON.parse(localStorage.getItem('fauzi_custom_projects') || '[]');
+      
+      // Remove any previously rendered custom project elements
+      document.querySelectorAll('.custom-project-card').forEach(el => el.remove());
+
+      customProjects.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = `custom-project-card project-card glass-card rounded-3xl overflow-hidden border border-brand-500/40 hover:border-brand-500 hover:shadow-2xl transition-all duration-300 flex flex-col group cursor-pointer`;
+        card.setAttribute('data-category', 'canva ' + item.category);
+
+        const imgHtml = item.imgSrc 
+          ? `<img src="${item.imgSrc}" alt="${item.title}" class="w-full h-full object-cover">`
+          : `<div class="my-auto text-center z-10 py-4"><i data-lucide="image" class="w-10 h-10 mx-auto text-brand-400 mb-2"></i><p class="font-bold text-white text-lg">${item.title}</p></div>`;
+
+        card.innerHTML = `
+          <div class="relative aspect-[4/3] bg-gradient-to-br from-slate-900 to-amber-950/40 p-4 flex flex-col justify-between overflow-hidden border-b border-slate-800">
+            <div class="flex justify-between items-start z-10">
+              <span class="px-2.5 py-1 rounded-md bg-brand-500/20 text-brand-300 text-[10px] font-bold uppercase">${item.category}</span>
+              <span class="text-[10px] text-brand-400 font-mono">KARYA ASLI FAUZI</span>
+            </div>
+            ${imgHtml}
+            <div class="flex justify-between items-end z-10 text-[9px] text-slate-400 font-mono">
+              <span>${item.tools}</span>
+              <span>DITAMBAHKAN ${item.date}</span>
+            </div>
+          </div>
+          <div class="p-5 flex flex-col justify-between flex-grow">
+            <div>
+              <h3 class="font-display font-bold text-lg text-white group-hover:text-brand-400 transition-colors">${item.title}</h3>
+              <p class="text-slate-400 text-xs sm:text-sm mt-1.5 line-clamp-2">${item.desc}</p>
+            </div>
+            <div class="flex items-center justify-between pt-4 mt-4 border-t border-slate-800 text-xs font-semibold text-brand-400">
+              <span>Karya Mandiri</span>
+              <span class="text-slate-500 font-mono">#KoleksiPribadi</span>
+            </div>
+          </div>
+        `;
+        container.insertBefore(card, container.firstChild);
+      });
+      lucide.createIcons();
+    }
+
+    // Direct WhatsApp Form Submission
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('senderName').value;
+      const type = document.getElementById('projectType').value;
+      const message = document.getElementById('senderMessage').value;
+
+      const fullMessage = `Halo Fauzi Abidin!%0A%0ASaya: *${encodeURIComponent(name)}*%0AKebutuhan Proyek: *${encodeURIComponent(type)}*%0APesan / Detail: ${encodeURIComponent(message)}%0A%0A(Dikirim melalui Portofolio Web Fauzi Abidin)`;
+      
+      confetti({
+        particleCount: 50,
+        spread: 60,
+        origin: { y: 0.8 }
+      });
+
+      const waUrl = `https://wa.me/6289508049216?text=${fullMessage}`;
+      window.open(waUrl, '_blank');
+    }
+
+    // Database Produk Digital Fauzi Abidin
+    const digitalProducts = {
+      keuangan: {
+        title: "AuraFinance 2026 — Panduan Cerdas Atur Duit Anti Boncos",
+        price: "Rp 33.000",
+        file: "keuangan_2026.html",
+        image: "produk_keuangan_2026.jpg",
+        icon: "wallet",
+        waText: "Halo Fauzi Abidin, saya sudah mentransfer Rp 33.000 ke rekening 901008397024 untuk pembelian produk digital AuraFinance 2026. Mohon konfirmasi dan kirimkan file template HTML-nya. Terima kasih!"
+      },
+      creator_os: {
+        title: "Creator OS 2026 • Master Schedule & High-Income Blueprint",
+        price: "Rp 33.000",
+        file: "jadwal_content_creator.html",
+        image: "produk_creator_os.jpg",
+        icon: "video",
+        waText: "Halo Fauzi Abidin, saya sudah mentransfer Rp 33.000 ke rekening 901008397024 untuk pembelian produk digital Creator OS 2026. Mohon konfirmasi dan kirimkan file template HTML-nya. Terima kasih!"
+      }
+    };
+
+    function openBuyModal(productId) {
+      const prod = digitalProducts[productId];
+      if (!prod) return;
+
+      document.getElementById('buyModalProductName').textContent = prod.title;
+      document.getElementById('buyModalPrice').textContent = prod.price;
+      document.getElementById('buyModalTransferAmount').textContent = prod.price;
+      document.getElementById('buyModalProductImg').src = prod.image;
+      document.getElementById('buyModalDemoBtn').href = prod.file;
+      document.getElementById('buyModalWaBtn').href = `https://wa.me/6289508049216?text=${encodeURIComponent(prod.waText)}`;
+
+      const modal = document.getElementById('buyProductModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      lucide.createIcons();
+    }
+
+    function closeBuyModal() {
+      const modal = document.getElementById('buyProductModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Copy Account Number Helper with Visual Feedback
+    function copyRekening(number, btnElement) {
+      navigator.clipboard.writeText(number).then(() => {
+        const label = btnElement.querySelector('.copy-label');
+        const origText = label ? label.textContent : '';
+        if (label) label.textContent = "Tersalin! ✅";
+        btnElement.classList.add('bg-emerald-500', 'text-slate-950');
+
+        // Confetti celebration on copy
+        confetti({
+          particleCount: 30,
+          spread: 50,
+          origin: { y: 0.7 }
+        });
+
+        setTimeout(() => {
+          if (label) label.textContent = origText || "Salin";
+          btnElement.classList.remove('bg-emerald-500', 'text-slate-950');
+        }, 2500);
+      }).catch(err => {
+        prompt("Salin nomor rekening ini:", number);
+      });
+    }
+
+    // Modal click outside & escape listeners
+    document.getElementById('buyProductModal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'buyProductModal') {
+        closeBuyModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (typeof closeDetailModal === 'function') closeDetailModal();
+        if (typeof closeAddProjectModal === 'function') closeAddProjectModal();
+        closeBuyModal();
+      }
+    });
+  </script>
+</body>
+</html>
